@@ -1,1 +1,1 @@
-This repository contains setup scripts for several RDF triple stores.
+This repository contains setup scripts for various RDF triple stores.
