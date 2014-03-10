@@ -12,6 +12,6 @@ cp $VAGRANT_ROOT/stardog-license-key.bin $STARDOG_HOME/
 
 sudo cp $VAGRANT_ROOT/upstart-stardog.conf /etc/init/stardog.conf
 #./stardog-admin server start
-#sudo start stardog
+sudo start stardog
 
 
