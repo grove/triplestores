@@ -13,3 +13,14 @@ Load data into the triplestore:
 
 The Sparql endpoint is [here](http://localhost:10035/).
 
+Notes:
+
+Had to patch the bsbmtools-0.2/src/benchmark/testdriver/NetQuery.java file by adding the following inside the constructor as the Allegrograph Sparql endpoint requires authentication:
+
+<pre>
+Authenticator.setDefault (new Authenticator() {
+        protected PasswordAuthentication getPasswordAuthentication() {
+            return new PasswordAuthentication ("root", "root".toCharArray());
+        }
+    });
+</pre>
