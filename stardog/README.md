@@ -4,7 +4,7 @@ vagrant up
 vagrant ssh
 </pre>
 
-Load data into the triplestore:
+Add dataset_5m.ttl to the triplestore/stardog directory, and then load data into the triplestore:
 <pre>
 /vagrant/load_data.sh
 </pre>
