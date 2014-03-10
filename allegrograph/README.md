@@ -24,3 +24,10 @@ Authenticator.setDefault (new Authenticator() {
         }
     });
 </pre>
+
+Run BSBM test suite:
+
+<pre>
+cd bsbmtools-0.2
+./testdriver -dg http://example.org http://localhost:10035/sparql
+</pre>
