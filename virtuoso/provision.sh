@@ -13,3 +13,6 @@ sudo make install 2>&1 | tee /var/log/virtusos-compile.log
 rm -rf $VIRTUOSO_SRC
 sudo apt-get clean
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+sudo /usr/local/virtuoso-opensource/bin/virtuoso-t -df +configfile /usr/local/virtuoso-opensource/var/lib/virtuoso/db/virtuoso.ini &
+

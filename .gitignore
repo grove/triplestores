@@ -6,3 +6,5 @@ target/
 rebel.xml
 .vagrant/
 *.ttl
+*.zip
+*.bin

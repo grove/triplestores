@@ -9,11 +9,12 @@ Load data into the triplestore:
 /vagrant/load_data.sh
 </pre>
 
-The Sparql endpoint is [here](http://localhost:8081/sparql).
+The Sparql endpoint is [here](http://localhost:8082/sparql).
 
 Run BSBM test suite:
 
 <pre>
 cd bsbmtools-0.2
-./testdriver -dg http://example.org http://localhost:8081/sparql
+./testdriver -dg http://example.org http://localhost:8082/sparql
 </pre>
+ openjdk-7-jre-headless curl
