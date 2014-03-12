@@ -1,3 +1,8 @@
+Note that the vagrant provisioning script expects that the files
+<code>stardog-2.1.1.zip</code> and
+<code>stardog-license-key.bin</code> are located in this directory.
+Please add them yourself as Stardog is proprietary software.
+
 Provision and login:
 <pre>
 vagrant up

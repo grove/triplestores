@@ -1,4 +1,7 @@
-Note that the vagrant provisioning script expects that agraph-4.13.1-linuxamd64.64.tar.gz is located in this directory. Please add it yourself as Allegrograph is proprietary software.
+Note that the vagrant provisioning script expects that
+<code>agraph-4.13.1-linuxamd64.64.tar.gz</code> is located in this
+directory. Please add it yourself as Allegrograph is proprietary
+software.
 
 Provision and login:
 <pre>
