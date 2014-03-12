@@ -11,7 +11,7 @@ Load data into the triplestore:
 /vagrant/load_data.sh
 </pre>
 
-The Sparql endpoint is [here](http://localhost:10035/).
+The Sparql endpoint is [here](http://localhost:10035/). Credentials: root/root
 
 Notes:
 
