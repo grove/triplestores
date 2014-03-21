@@ -14,5 +14,9 @@ rm -rf $VIRTUOSO_SRC
 sudo apt-get clean
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+wget -O /home/vagrant/bsbmtools-v0.2.zip http://downloads.sourceforge.net/project/bsbmtools/bsbmtools/bsbmtools-0.2/bsbmtools-v0.2.zip
+unzip -d /home/vagrant/ /home/vagrant/bsbmtools-v0.2.zip
+chown -R vagrant:vagrant /home/vagrant/bsbmtools-0.2
+
 sudo /usr/local/virtuoso-opensource/bin/virtuoso-t -df +configfile /usr/local/virtuoso-opensource/var/lib/virtuoso/db/virtuoso.ini &
 

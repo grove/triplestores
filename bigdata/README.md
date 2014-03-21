@@ -4,16 +4,28 @@ vagrant up
 vagrant ssh
 </pre>
 
-Load data into the triplestore:
+The Sparql endpoint is [here](http://localhost:8081/sparql).
+
+Create test data:
 <pre>
-/vagrant/load_data.sh
+cd /vagrant
+time ./create_data.sh
 </pre>
 
-The Sparql endpoint is [here](http://localhost:8081/sparql).
+Load data into the triplestore:
+<pre>
+cd /vagrant
+time ./load_data.sh
+</pre>
 
 Run BSBM test suite:
 
 <pre>
-cd bsbmtools-0.2
-./testdriver -dg http://example.org http://localhost:8081/sparql
+cd /vagrant
+time ./run_tests.sh
+</pre>
+
+Or do everything in one go:
+<pre>
+cd /vagrant && time ./create_data.sh && time ./load_data.sh && time ./run_tests.sh
 </pre>
