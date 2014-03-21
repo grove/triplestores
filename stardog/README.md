@@ -42,3 +42,8 @@ Run BSBM test suite:
 cd /vagrant
 time ./run_tests.sh
 </pre>
+
+Or do everything in one go:
+<pre>
+cd /vagrant && time ./create_data.sh && time ./load_data.sh && time ./run_tests.sh
+</pre>

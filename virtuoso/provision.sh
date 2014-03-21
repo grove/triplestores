@@ -1,7 +1,9 @@
 VAGRANT_ROOT=/vagrant
 VIRTUOSO_SRC=/home/vagrant/virtuoso-opensource
+
 sudo apt-get update
-sudo apt-get -y install dpkg-dev build-essential autoconf automake libtool flex bison gperf gawk m4 make odbcinst libxml2-dev libssl-dev libreadline-dev unzip emacs23-nox git-core openssl
+sudo apt-get -y install dpkg-dev build-essential autoconf automake libtool flex bison gperf gawk m4 make odbcinst libxml2-dev libssl-dev libreadline-dev git-core openssl openjdk-7-jdk curl unzip emacs23-nox
+
 git clone -v https://github.com/openlink/virtuoso-opensource.git 2>&1 | tee /var/log/virtusos-git.log
 cd $VIRTUOSO_SRC
 git fetch origin
@@ -18,5 +20,6 @@ wget -O /home/vagrant/bsbmtools-v0.2.zip http://downloads.sourceforge.net/projec
 unzip -d /home/vagrant/ /home/vagrant/bsbmtools-v0.2.zip
 chown -R vagrant:vagrant /home/vagrant/bsbmtools-0.2
 
-sudo /usr/local/virtuoso-opensource/bin/virtuoso-t -df +configfile /usr/local/virtuoso-opensource/var/lib/virtuoso/db/virtuoso.ini &
+sudo cp $VAGRANT_ROOT/upstart-virtuoso.conf /etc/init/virtuoso.conf
+sudo start virtuoso
 
