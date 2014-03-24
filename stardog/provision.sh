@@ -14,7 +14,6 @@ cp $VAGRANT_ROOT/stardog-license-key.bin $STARDOG_HOME/
 
 wget -O /home/vagrant/bsbmtools-v0.2.zip http://downloads.sourceforge.net/project/bsbmtools/bsbmtools/bsbmtools-0.2/bsbmtools-v0.2.zip
 unzip -d /home/vagrant/ /home/vagrant/bsbmtools-v0.2.zip
-
 cp $VAGRANT_ROOT/patched-bsbm.jar /home/vagrant/bsbmtools-0.2/lib/bsbm.jar
 
 chown -R vagrant:vagrant $STARDOG_HOME
