@@ -1,3 +1,5 @@
+This is a Ubuntu 12.04 Vagrant box. It uses Upstart for running the triplestore server.
+
 Provision and login:
 <pre>
 vagrant up

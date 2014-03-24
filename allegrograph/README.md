@@ -1,3 +1,5 @@
+This is a Ubuntu 12.04 Vagrant box. It uses Upstart for running the triplestore server.
+
 Note that the vagrant provisioning script expects that
 <code>agraph-4.13.1-linuxamd64.64.tar.gz</code> is located in this
 directory. Please add it yourself as Allegrograph is proprietary
