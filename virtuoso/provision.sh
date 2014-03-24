@@ -23,6 +23,6 @@ chown -R vagrant:vagrant /home/vagrant/bsbmtools-0.2
 sudo cp $VAGRANT_ROOT/upstart-virtuoso.conf /etc/init/virtuoso.conf
 sudo start virtuoso
 
-sleep 5
+sleep 3
 /usr/local/virtuoso-opensource/bin/isql localhost dba dba /vagrant/dbsetup.isql
 

@@ -1,2 +1,3 @@
 grant SPARQL_UPDATE to "SPARQL";
+SPARQL CREATE GRAPH <http://example.org/test>;
 exit;
