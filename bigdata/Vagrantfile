@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :shell, :path => "provision.sh"
 
-  config.vm.synced_folder "../scripts", "/mnt/scripts"
+  # config.vm.synced_folder "../scripts", "/mnt/scripts"
 
   # Uncomment below to enable NFS for sharing the host machine into the coreos-vagrant VM.
   #config.vm.network "private_network", ip: "172.12.8.150"
