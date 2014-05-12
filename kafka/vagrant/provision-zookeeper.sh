@@ -26,5 +26,8 @@ wget -q http://mirror.gopotato.co.uk/apache/kafka/0.8.1.1/kafka_2.8.0-0.8.1.1.tg
 tar xfz /tmp/kafka_2.8.0-0.8.1.1.tgz -C /opt
 mv /opt/kafka_2.8.0-0.8.1.1 /opt/kafka
 chmod a+rw /opt
-cd /opt/kafka
-bin/zookeeper-server-start.sh config/zookeeper.properties 1>> /tmp/zk.log 2>> /tmp/zk.log &
+
+sudo cp /vagrant/upstart-zookeeper.conf /etc/init/zookeeper.conf
+
+chown -R vagrant:vagrant /opt/kafka
+sudo start zookeeper
