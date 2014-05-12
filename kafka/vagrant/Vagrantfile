@@ -1,0 +1,38 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "ubuntu/trusty64"
+
+  config.vm.define "zookeeper" do |zookeeper|
+    zookeeper.vm.network :private_network, ip: "192.168.50.5"
+    zookeeper.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024"]
+    end
+    zookeeper.vm.provision "shell", path: "provision-zookeeper.sh"
+  end
+
+  config.vm.define "brokerOne" do |brokerOne|
+    brokerOne.vm.network :private_network, ip: "192.168.50.10"
+    brokerOne.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024"]
+    end
+    brokerOne.vm.provision "shell", path: "provision-kafka.sh", :args => "1"
+  end
+
+  config.vm.define "brokerTwo" do |brokerTwo|
+    brokerTwo.vm.network :private_network, ip: "192.168.50.20"
+    brokerTwo.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024"]
+    end
+    brokerTwo.vm.provision "shell", path: "provision-kafka.sh", :args => "2"
+  end
+
+  config.vm.define "brokerThree" do |brokerThree|
+    brokerThree.vm.network :private_network, ip: "192.168.50.30"
+    brokerThree.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024"]
+    end
+    brokerThree.vm.provision "shell", path: "provision-kafka.sh", :args => "3"
+  end  
+
+end
