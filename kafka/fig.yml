@@ -1,0 +1,27 @@
+kafka1:
+  image: grove/kafka:latest
+  ports:
+    - 9092:9092
+  links:
+    - zk:zk
+  volumes:
+    - /home/vagrant:/home/vagrant
+  environment:
+   BROKER_ID: 1
+   HOST_IP: 172.17.8.101
+   PORT: 9092
+   DATA_DIR: /home/vagrant/kafka1-data
+   LOG_DIR: /home/vagrant/kafka1-log
+
+zk:
+  image: grove/zookeeper:latest
+  volumes:
+    - /home/vagrant:/home/vagrant
+  ports:
+   - "2181:2181"
+   - "2888:2888"
+   - "3888:3888"
+  environment:
+   HOST_IP: 0.0.0.0
+   DATA_DIR: /home/vagrant/zookeeper1-data
+   LOG_DIR: /home/vagrant/zookeeper1-log
