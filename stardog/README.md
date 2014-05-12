@@ -1,10 +1,10 @@
-Stardog 2.1.1
+Stardog 2.1.3
 =============
 
 This is a Ubuntu 12.04 Vagrant box. It uses Upstart for running the triplestore server.
 
 Note that the vagrant provisioning script expects that the files
-<code>stardog-2.1.1.zip</code> and
+<code>stardog-2.1.3.zip</code> and
 <code>stardog-license-key.bin</code> are located in this directory.
 Please add them yourself as Stardog is proprietary software.
 

@@ -1,11 +1,11 @@
 VAGRANT_ROOT=/vagrant
 VAGRANT_HOME=/home/vagrant
-STARDOG_BIN=$VAGRANT_HOME/stardog-2.1.1/bin
+STARDOG_BIN=$VAGRANT_HOME/stardog-2.1.3/bin
 
 sudo apt-get update
 sudo apt-get -y install openjdk-7-jdk curl unzip emacs23-nox
 
-unzip $VAGRANT_ROOT/stardog-2.1.1.zip -d $VAGRANT_HOME
+unzip $VAGRANT_ROOT/stardog-2.1.3.zip -d $VAGRANT_HOME
 
 STARDOG_HOME=$VAGRANT_HOME/stardog-data
 mkdir -p $STARDOG_HOME
